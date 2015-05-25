@@ -9,6 +9,13 @@ app.set('port', process.env.PORT || 3000);
 //app.port('4000');
 
 
+//get static index file
+
+
+//routes
+
+
+//page not found
 app.use(function (req, res) {
     res.type('text/plain');
     res.status(400);
