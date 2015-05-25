@@ -32,7 +32,9 @@ app.use(function (err, req, res, next) {
 
 });
 
-app.listen(app.get('port'), function () {
-    console.log('Server started');
-    //logger.info('Server started on Port');
-});
+module.exports.start1 = function () {
+    app.listen(app.get('port'), function () {
+        console.log('Server started');
+        //logger.info('Server started on Port');
+    });
+};
