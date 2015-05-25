@@ -10,10 +10,31 @@ app.set('port', process.env.PORT || 3000);
 
 
 //get static index file
+//Get Login-Page
 
+//Get Status-Info
 
 //routes
+app.get('/SayHello', function (req, res) {
+    res.type('text/plain');
+    res.status(200);
+    res.send('Hello from express');
 
+});
+
+//Write to Mongo
+
+
+//Write to redis
+
+
+//Read from Redis
+
+
+//Read from Mongo
+
+
+//List filesystem
 
 //page not found
 app.use(function (req, res) {
