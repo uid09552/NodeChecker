@@ -2,6 +2,7 @@
  * Created by Max on 24.05.15.
  */
 var express = require('express');
+
 var fs = require('fs');
 var logger = require('log4js');
 var app = express();
@@ -15,6 +16,7 @@ var mongo = require('../routes/mongo');//Write to Mongo
 //get static index file
 //Get Login-Page
 app.use(express.static('./public'));
+
 
 //routes
 //Default

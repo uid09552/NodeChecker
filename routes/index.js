@@ -6,9 +6,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-    res.type('text/plain');
-    res.status(200);
-    res.send('Hello from index');
+    router.sendfile('Login.html', {root: path.join(__dirname, '../public')});
 });
 
 module.exports = router;
