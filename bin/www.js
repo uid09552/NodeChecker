@@ -12,19 +12,22 @@ app.set('port', process.env.PORT || 3000);
 //Routes
 var index = require('../routes/index');
 var mongo = require('../routes/mongo');//Write to Mongo
+var redis=require('../routes/redis');
+var filesystem=require('../routes/filesystem');
 
 //get static index file
-//Get Login-Page
-app.use(express.static('./Views'));
-
+app.use(express.static('./public'));
+//HTML VIEW ENGINGE
 app.set('views', './Views');
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
-//routes
-//Default
+
+//ROUTES
 app.use('/', index);
-//Write/Read to mongo
 app.use('/mongo', mongo);
+app.use('/redis',redis);
+
+
 
 app.get('/SayHello', function (req, res) {
     res.type('text/plain');
@@ -62,9 +65,10 @@ app.use(function (req, res) {
 app.use(function (err, req, res, next) {
     res.type('text/plain');
     res.status(500);
-    res.send('internal Server error');
+    res.send(err);
 
 });
+
 
 module.exports.start1 = function () {
     app.listen(app.get('port'), function () {

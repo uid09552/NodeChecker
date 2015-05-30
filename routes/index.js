@@ -6,9 +6,9 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 router.get('/', function (req, res) {
-    console.log(__dirname);
 
-    res.render('Login');
+  //res.sendfile('./Views/login.html');
+    res.render('login');
 });
 
 module.exports = router;
