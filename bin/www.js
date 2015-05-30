@@ -15,9 +15,11 @@ var mongo = require('../routes/mongo');//Write to Mongo
 
 //get static index file
 //Get Login-Page
-app.use(express.static('./public'));
+app.use(express.static('./Views'));
 
-
+app.set('views', './Views');
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 //routes
 //Default
 app.use('/', index);
