@@ -2,39 +2,142 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="684c5aad-24f3-45d3-8b93-bfd32da09d9f" name="Default" comment="init">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/NodeChecker_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/filesystem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/redis.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/css/font-awesome.css" afterPath="$PROJECT_DIR$/public/css/font-awesome.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/css/styles.css" afterPath="$PROJECT_DIR$/public/css/styles.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/img/64-64.jpg" afterPath="$PROJECT_DIR$/public/img/64-64.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/img/logo.png" afterPath="$PROJECT_DIR$/public/img/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Views/js/jquery-1.11.1.js" afterPath="$PROJECT_DIR$/public/js/jquery-1.11.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/NodeChecker.iml" afterPath="$PROJECT_DIR$/.idea/NodeChecker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/blank.html" afterPath="$PROJECT_DIR$/Views/blank.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/forms.html" afterPath="$PROJECT_DIR$/Views/forms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/index.html" afterPath="$PROJECT_DIR$/Views/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/login.html" afterPath="$PROJECT_DIR$/Views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/table.html" afterPath="$PROJECT_DIR$/Views/table.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/ui.html" afterPath="$PROJECT_DIR$/Views/ui.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/drivespace.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/CHANGE_LOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/async/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/async/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/OriginalLicense.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/async/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/async/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/async/lib/async.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/async/lib/async.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/test/basic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/async/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/async/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/da-dk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/da-dk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/da-dk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/da-dk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/da-dk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/da-dk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/de-de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/de-de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/de-de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/de-de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/de-de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/de-de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/lib/disks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/diskspace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/examples/drive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/examples/drives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/en-gb.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/en-gb.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/fr-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/fr-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/fr-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/fr-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/fr-ch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/fr-ch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/lib/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/ja.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/ja.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/npm-debug.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/numeral.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/numeral.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/min/numeral.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/min/numeral.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/async/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/async/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/pt-br.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/pt-br.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/pt-pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/pt-pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/pt-pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/pt-pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/pt-pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/pt-pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/diskspace/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/tests/languages/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/tests/languages/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/node-diskfree/node_modules/numeral/languages/min/tr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodejs-disks/node_modules/numeral/languages/min/tr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/filesystem.js" afterPath="$PROJECT_DIR$/routes/filesystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www.js" afterPath="$PROJECT_DIR$/bin/www.js" />
     </list>
@@ -501,36 +604,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="redis.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/redis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#38#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filesystem.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/filesystem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2919708" vertical-offset="0" max-vertical-offset="411">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#38#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="www.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="www.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/www.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1245">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.54744524" vertical-offset="180" max-vertical-offset="1050">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="child_process.js" pinned="false" current-in-tab="false">
+        <entry file="mock://child_process.js">
+          <provider selected="true" editor-type-id="vmFileEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blank.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/blank.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.5" vertical-offset="60" max-vertical-offset="2445">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#38#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -553,9 +661,9 @@
         <option value="$PROJECT_DIR$/routes/mongo.js" />
         <option value="$PROJECT_DIR$/Views/login.html" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/bin/www.js" />
         <option value="$PROJECT_DIR$/routes/redis.js" />
         <option value="$PROJECT_DIR$/routes/filesystem.js" />
+        <option value="$PROJECT_DIR$/bin/www.js" />
       </list>
     </option>
   </component>
@@ -596,58 +704,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="NodeChecker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeChecker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -835,7 +891,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28630137" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
@@ -881,14 +937,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/www.js</url>
-          <line>67</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -998,21 +1047,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32846716" vertical-offset="0" max-vertical-offset="411">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10852713" vertical-offset="138" max-vertical-offset="825">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/redis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40145984" vertical-offset="0" max-vertical-offset="411">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1026,31 +1075,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www.js">
+    <entry file="file://$PROJECT_DIR$/Views/blank.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1245">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state vertical-scroll-proportion="2.5" vertical-offset="60" max-vertical-offset="2445">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/redis.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/diskspace/diskspace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4890511" vertical-offset="894" max-vertical-offset="1305">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/filesystem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2919708" vertical-offset="0" max-vertical-offset="411">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.9489051" vertical-offset="45" max-vertical-offset="705">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54744524" vertical-offset="180" max-vertical-offset="1050">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

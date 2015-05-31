@@ -26,7 +26,7 @@ app.engine('html', require('ejs').renderFile);
 app.use('/', index);
 app.use('/mongo', mongo);
 app.use('/redis',redis);
-
+app.use('/filesystem', filesystem);//DONE
 
 
 app.get('/SayHello', function (req, res) {
@@ -36,19 +36,6 @@ app.get('/SayHello', function (req, res) {
 
 });
 
-
-
-
-//Write to redis
-
-
-//Read from Redis
-
-
-//Read from Mongo
-
-
-//List filesystem
 
 
 //page not found
