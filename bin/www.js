@@ -2,13 +2,14 @@
  * Created by Max on 24.05.15.
  */
 var express = require('express');
-
+var bodyParser = require("body-parser");
 var fs = require('fs');
 var logger = require('log4js');
+
 var app = express();
 app.set('port', process.env.PORT || 3000);
-
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 //Routes
 var index = require('../routes/index');
 var mongo = require('../routes/mongo');//Write to Mongo
@@ -21,6 +22,7 @@ app.use(express.static('./public'));
 app.set('views', './Views');
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
+
 
 //ROUTES
 app.use('/', index);

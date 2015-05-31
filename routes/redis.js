@@ -11,4 +11,12 @@ router.get('/',function(req,res){
     res.send('OK');
 });
 
+router.post('/save',function(req,res)
+{
+   var title=req.body;
+   console.log(title);
+    res.status(201);
+    res.send("OK");
+});
+
 module.exports=router;
