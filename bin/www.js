@@ -9,7 +9,7 @@ var logger = require('log4js');
 var app = express();
 app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 //Routes
 var index = require('../routes/index');
 var mongo = require('../routes/mongo');//Write to Mongo
@@ -20,8 +20,11 @@ var filesystem=require('../routes/filesystem');
 app.use(express.static('./public'));
 //HTML VIEW ENGINGE
 app.set('views', './Views');
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
+//app.set('view engine', 'html');
+//app.engine('html', require('ejs').renderFile);
+
+app.set('view engine', 'jade');
+
 
 
 //ROUTES
@@ -55,7 +58,7 @@ app.use(function (err, req, res, next) {
     res.type('text/plain');
     res.status(500);
     res.send(err);
-
+    console.log(err);
 });
 
 
