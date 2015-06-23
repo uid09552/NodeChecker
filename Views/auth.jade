@@ -1,4 +1,5 @@
 doctype html(lang='en')
+html(ng-app='Login')
 head
     meta(http-equiv='content-type', content='text/html; charset=UTF-8')
 
@@ -18,7 +19,7 @@ head
 body
     // login modal
     #loginModal.modal.show(tabindex='-1', role='dialog', aria-hidden='true')
-        .modal-dialog
+        div(ng-controller="Login").modal-dialog
             .modal-content
                 .modal-header
                     button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
@@ -28,16 +29,23 @@ body
                 .modal-body
                     form.form.col-md-12.center-block
                         .form-group
-                            input.form-control.input-lg(type='text', placeholder='Email')
+                            input.form-control.input-lg(type='text', placeholder='Email',ng-model="user")
 
                         .form-group
-                            input.form-control.input-lg(type='password', placeholder='Password')
+                            input.form-control.input-lg(type='password', placeholder='Password',ng-model="pwd")
 
                         .form-group
-                            button.btn.btn-primary.btn-lg.btn-block Sign In
+                            button(ng-click="loginclick()").btn.btn-primary.btn-lg.btn-block Sign In
+                        .row
+                            div Number of registered users: #{CountUsr}
+                            div Status: {{controllerStat}}
 
                 .modal-footer
                     .col-md-12
     // script references
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
-    script(src='../js/bootstrap.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/angularjs/angular.js')
+    script(src='js/angular-route/angular-route.js')
+    script(src='scripts/app.js')
+    script(src='scripts/Login.js')

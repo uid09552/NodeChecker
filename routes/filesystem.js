@@ -6,7 +6,7 @@ var router=express.Router();
 var discspace = require('diskspace');
 var njds = require('nodejs-disks');
 
-router.get('/',function(req,res){
+router.get('/filesystem',function(req,res){
     var alldiscstatus = [];
     var discstatus;
     var status;

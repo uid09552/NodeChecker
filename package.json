@@ -14,6 +14,11 @@
     "ejs": "^2.3.1",
     "express": "^4.12.4",
     "jade": "^1.10.0",
-    "log4js": "^0.6.25"
+    "jsonwebtoken": "^5.0.1",
+    "log4js": "^0.6.25",
+    "mongoose": "^4.0.5",
+    "morgan": "^1.5.3",
+    "node-hash": "^1.1.2",
+    "password-hash": "^1.2.2"
   }
 }
