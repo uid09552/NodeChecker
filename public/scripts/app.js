@@ -24,3 +24,25 @@ testApp.controller('MainCt' +
 'rl', function ($scope) {
     console.log("APP STARTED");
 });
+
+testApp.service('SessionService',function(){
+   var isAuthenticated=false;
+    var token="";
+  function setAuthentication(value)
+  {
+      this.isAuthenticated=value;
+  }
+    function getAuthentication(){
+        return this.isAuthenticated;
+    }
+
+    function setToken(value)
+    {
+        this.token=value;
+    }
+    function getToken()
+    {
+        return this.token;
+    }
+});
+
