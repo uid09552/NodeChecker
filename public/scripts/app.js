@@ -25,6 +25,7 @@ testApp.controller('MainCt' +
     console.log("APP STARTED");
 });
 
+
 testApp.service('SessionService',function(){
    var isAuthenticated=false;
     var token="";

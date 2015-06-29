@@ -28,6 +28,7 @@ var auth=require('../routes/auth');
 var login=require('../routes/login');
 var filesystem=require('../routes/filesystem');
 var setup=require('../routes/setup');
+var verify = require('../routes/verify');
 //get static index file
 app.use(express.static('./public'));
 //HTML VIEW ENGINGE
@@ -50,10 +51,11 @@ app.set('view engine', 'jade');
 
 
 //ROUTES
+
 app.use('/', index);
 app.use('/auth',auth);
 app.use('/Login',login);
-
+//app.use(verify);
 app.get('/SayHello', function (req, res) {
     res.type('text/plain');
     res.status(200);
@@ -101,7 +103,7 @@ app.use('/mongo',isAuthenticated, mongo);
 app.use('/redis',isAuthenticated,redis);
 app.use('/filesystem',isAuthenticated, filesystem);//DONE
 app.use('/setup',isAuthenticated,setup);
-app.use('/#',isAuthenticated,filesystem);
+
 
 //page not found
 app.use(function (req, res) {
