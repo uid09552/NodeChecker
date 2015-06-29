@@ -53,6 +53,7 @@ app.set('view engine', 'jade');
 //ROUTES
 
 app.use('/', index);
+//Login and auth
 app.use('/auth',auth);
 app.use('/Login',login);
 //app.use(verify);
