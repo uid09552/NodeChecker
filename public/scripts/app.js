@@ -2,7 +2,7 @@
  * Created by Max on 23.06.15.
  */
 
-var testApp=angular.module('app',['ngRoute','Login']);
+var testApp=angular.module('app',['ngRoute','Login','start']);
 
 testApp.config(function ($routeProvider,$locationProvider) {
     $routeProvider
@@ -14,10 +14,18 @@ testApp.config(function ($routeProvider,$locationProvider) {
             templateUrl: '/mongo',
             controller: 'Login'
         })
+        .when('/filesystem',{
+            templateUrl: '/filesystem'
+        })
+        .when('/start',{
+            templateUrl: '/start',
+            controller: 'start'
+        })
             .otherwise({
                 redirectTo:'/login'
             });
 });
+
 
 /* CONTROLLER MAIN FORM */
 testApp.controller('MainCt' +
@@ -26,24 +34,41 @@ testApp.controller('MainCt' +
 });
 
 
-testApp.service('SessionService',function(){
-   var isAuthenticated=false;
-    var token="";
-  function setAuthentication(value)
-  {
-      this.isAuthenticated=value;
-  }
-    function getAuthentication(){
-        return this.isAuthenticated;
+testApp.factory('SessionState',function(){
+    var isAuthenticated=false;
+    var token;
+    return {
+        isAuthenticated:function(){
+            return isAuthenticated;
+        },
+        setAuth: function(value)
+        {
+            isAuthenticated=value;
+        },
+        getToken: function()
+        {
+            return token;
+        },
+        setToken: function(value)
+        {
+            token=value;
+        }
     }
+});
 
-    function setToken(value)
-    {
-        this.token=value;
-    }
-    function getToken()
-    {
-        return this.token;
-    }
+testApp.run(function($rootScope,$location,SessionState){
+    $rootScope.$on('$routeChangeStart',
+    function(event,next,current){
+        if (!SessionState.isAuthenticated())
+        {
+          $location.path("/");
+
+        }
+        else
+        {
+
+        }
+    });
+
 });
 
