@@ -57,6 +57,10 @@ app.use('/', index);
 //Login and auth
 app.use('/auth',auth);
 app.use('/Login',login);
+
+//rest api todo authentication
+require('../routes/api')(app);
+
 //app.use(verify);
 app.get('/SayHello', function (req, res) {
     res.type('text/plain');
