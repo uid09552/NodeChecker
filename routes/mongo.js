@@ -30,7 +30,7 @@ router.get('/', function (req, res) {
 
 router.post('/',function(req,res){
     var data=req.body;
-    console.log(data.Test);
+
     var testdata=mongoose.model('testdata');
     var mydata=new testdata({mytestdata:JSON.stringify(data)});
     mydata.save(function(err,result){

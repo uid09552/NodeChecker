@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+html(ng-app="start")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+        link(href='../css/bootstrap.min.css', rel='stylesheet')
+    body(ng-controller="start")
+    div Startmaske
+    div.row
+        div.col-md-12.center-block#mouseclick Mausklick direktive
+            button(ng-click="mouseclick()").btn.btn-primary.btn-block.btn-lg Click
+            button(ng-click="clickreset($event)", ng-mouseover="mouseclick()")
+
+            div(ng-bind="mouseclickp")
+            input(ng-model="inputtest")
+            article(ng-bind="inputtest")
+    div.row
+        div.col-lg-12.center-block on change
+            label.checkbox
+                div.checkbox
+                    label.checkbox
+                        input(type="checkbox",ng-model="checked", ng-change="onchange()")
+                    label(ng-bind="onchangediv")
+                    label(ng-cloak) {{onchangediv}}
+    div.row styles
+        div.btn-group.col-lg-12
+            a.btn(href="#",ng-click="textclass='text-left'")
+                li.glyphicon-align-left
+            a.btn.glyphicon-align-center(ng-click="textclass='text-center'")
+            div width:
+            input(type="text",ng-model="textwidth")
+            div(ng-class="textclass",ng-style='{"width": textwidth+"px"}').col-lg-12 asdfasdfasdfdsfasdfasasfdasdfasfdasfdadfadsfasfdaswera
+            div(ng-div) vom Transclude
+
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/scripts.js')
+    script(src='js/angularjs/angular.js')
+    script(src='js/angular-route/angular-route.js')
+    script(src='scripts/Login.js')
+    script(src='scripts/dir/div.js')
+    script(src='scripts/start.js')
+
+    script(src='scripts/app.js')
+                                    

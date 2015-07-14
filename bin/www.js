@@ -28,6 +28,7 @@ var auth=require('../routes/auth');
 var login=require('../routes/login');
 var filesystem=require('../routes/filesystem');
 var setup=require('../routes/setup');
+var start=require('../routes/start');
 var verify = require('../routes/verify');
 //get static index file
 app.use(express.static('./public'));
@@ -53,8 +54,13 @@ app.set('view engine', 'jade');
 //ROUTES
 
 app.use('/', index);
+//Login and auth
 app.use('/auth',auth);
 app.use('/Login',login);
+
+//rest api todo authentication
+require('../routes/api')(app);
+
 //app.use(verify);
 app.get('/SayHello', function (req, res) {
     res.type('text/plain');
@@ -66,7 +72,7 @@ app.get('/SayHello', function (req, res) {
     function isAuthenticated(req, res, next) {
 
         // check header or url parameters or post parameters for token
-        var token = req.body.token || req.query.token || req.headers['x-access-token'];
+        var token = req.body.token || req.query.token || req.headers['x-auth-token'];
 
         // decode token
         if (token) {
@@ -100,9 +106,10 @@ app.get('/SayHello', function (req, res) {
     }
 //protected area
 app.use('/mongo',isAuthenticated, mongo);
-app.use('/redis',isAuthenticated,redis);
-app.use('/filesystem',isAuthenticated, filesystem);//DONE
+app.use('/api/redis',isAuthenticated,redis);
+app.use('/api/filesystem',isAuthenticated, filesystem);//DONE
 app.use('/setup',isAuthenticated,setup);
+app.use('/start',start);
 
 
 //page not found
