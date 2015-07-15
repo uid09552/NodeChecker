@@ -66,6 +66,7 @@ app.get('/SayHello', function (req, res) {
     res.type('text/plain');
     res.status(200);
     res.send('Hello from express');
+    console.log('/SayHello');
 
 });
 
