@@ -7,7 +7,7 @@ var config=require('../config/config');
 var mongoose=require('mongoose');
 var morgan = require('morgan');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
-
+var forever=require('forever');
 
 //var User   = require('../models/user'); // get our mongoose model
 
