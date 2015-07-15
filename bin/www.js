@@ -8,7 +8,7 @@ var mongoose=require('mongoose');
 var morgan = require('morgan');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var forever=require('forever');
-
+forever.checkProcess();
 //var User   = require('../models/user'); // get our mongoose model
 
 
@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 
 //logging
 app.use(morgan('dev'));
+
 
 //Routes
 var index = require('../routes/index');
