@@ -14,6 +14,7 @@ div.directive('ngDiv',function($log){
                 $log.info('directive clicked');
                 element.unbind('click');
                 element.remove();
+                $log.info('Removed via custom ngDiv');np
             });
             element.bind('$destroy',function(){
                $log.info(element);
