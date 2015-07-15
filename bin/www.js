@@ -14,6 +14,7 @@ var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 
 var app = express();
 app.set('port', config.port);
+console.log("port:"+app.get('port'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
