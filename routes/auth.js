@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var User = require('../models/user');
 var passwordHash = require('password-hash');
 var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
-
+var mocha=require('mocha');
 router.post('/', function (req, res) {
     var app = req.app;
     var username = req.body.Name;
