@@ -60,7 +60,7 @@ app.use('/Login',login);
 
 //rest api todo authentication
 require('../routes/api')(app);
-
+console.log('Route api set');
 //app.use(verify);
 app.get('/SayHello', function (req, res) {
     res.type('text/plain');
