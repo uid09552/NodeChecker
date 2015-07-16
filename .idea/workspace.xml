@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="684c5aad-24f3-45d3-8b93-bfd32da09d9f" name="Default" comment="angular routing added&#10;jwt authentication added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deploy.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy.sh" afterPath="$PROJECT_DIR$/deploy.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2a91ea88-40fe-4498-a517-46dba29228f6" name="New changelist" comment="" />
@@ -546,8 +546,8 @@
           <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deploy.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.095744684" vertical-offset="0" max-vertical-offset="470">
-                  <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="16" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="470">
+                  <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -1380,8 +1380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.095744684" vertical-offset="0" max-vertical-offset="470">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="470">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding />
         </state>
       </provider>

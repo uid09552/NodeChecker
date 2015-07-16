@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 npm install
 export PORT=3001
