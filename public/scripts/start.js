@@ -2,7 +2,7 @@
  * Created by Max on 02.07.15.
  */
 
-var start=angular.module('start',['app.div']);
+var start=angular.module('start',['app.div','app.service']);
 
 start.run(function(){
    console.log('start app loaded');
@@ -32,5 +32,11 @@ start.controller('start',function($scope){
         console.log($scope.onchangediv);
     }
 
+});
+
+start.controller('module',function($scope,FileData){
+
+    $scope.FileMessage=FileData.getFileData();
+    console.log($scope.FileMessage[0].Message);
 });
 

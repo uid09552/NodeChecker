@@ -2,7 +2,7 @@
  * Created by Max on 23.06.15.
  */
 
-var testApp=angular.module('app',['ngRoute','Login','start']);
+var testApp=angular.module('app',['ngRoute','Login','start','app.service','app.div']);
 
 testApp.config(function ($routeProvider,$locationProvider) {
     $routeProvider

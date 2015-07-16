@@ -34,6 +34,13 @@ html(ng-app="start")
             div(ng-class="textclass",ng-style='{"width": textwidth+"px"}').col-lg-12 asdfasdfasdfdsfasdfasasfdasdfasfdasfdadfadsfasfdaswera
             div(ng-div) vom Transclude
 
+    div.row service module
+        div.col-md-12
+            section(ng-controller="module")
+                div(ng-bind="FileMessage[0].Message")
+                ul.navlist
+                    li(ng-repeat="message in FileMessage") {{message.Message}}
+
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
     script(src='js/bootstrap.min.js')
@@ -42,6 +49,7 @@ html(ng-app="start")
     script(src='js/angular-route/angular-route.js')
     script(src='scripts/Login.js')
     script(src='scripts/dir/div.js')
+    script(src='scripts/service/service.js')
     script(src='scripts/start.js')
 
     script(src='scripts/app.js')
