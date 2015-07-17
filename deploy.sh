@@ -2,8 +2,9 @@
 
 npm install
 export PORT=3001
-forever stopall
-forever start app.js
+#forever stopall
+#forever start app.js
 echo 'forever started'
-forever list
+#forever list
+node app.js
 curl localhost:3001/start
