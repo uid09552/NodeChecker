@@ -40,3 +40,6 @@ start.controller('module',function($scope,FileData){
     console.log($scope.FileMessage[0].Message);
 });
 
+start.controller("forms",function($scope){
+   $scope.email;
+});

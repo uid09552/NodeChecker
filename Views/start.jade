@@ -40,7 +40,14 @@ html(ng-app="start")
                 div(ng-bind="FileMessage[0].Message")
                 ul.navlist
                     li(ng-repeat="message in FileMessage") {{message.Message}}
-
+    div.row(ng-controller="forms") Formulare
+        form.form-horizontal.well
+            div.control-group
+                div.controls
+                    input#inputEmail(type="email" required placeholder="email" ng-model="email")
+                    input#password(type="password" required placeholder="password")
+                input(type="button")
+                div {{email}}
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
     script(src='js/bootstrap.min.js')
