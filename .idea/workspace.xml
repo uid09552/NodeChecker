@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="684c5aad-24f3-45d3-8b93-bfd32da09d9f" name="Default" comment="angular routing added&#10;jwt authentication added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/factory/factory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/filesystem.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/Login.js" afterPath="$PROJECT_DIR$/public/scripts/Login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/app.js" afterPath="$PROJECT_DIR$/public/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/auth.jade" afterPath="$PROJECT_DIR$/Views/auth.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/filesystem.js" afterPath="$PROJECT_DIR$/routes/filesystem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/index.jade" afterPath="$PROJECT_DIR$/Views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/start.jade" afterPath="$PROJECT_DIR$/Views/start.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/start.js" afterPath="$PROJECT_DIR$/public/scripts/start.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy.sh" afterPath="$PROJECT_DIR$/deploy.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/basic-healthcheck/index.js" afterPath="$PROJECT_DIR$/node_modules/basic-healthcheck/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/basic-healthcheck/package.json" afterPath="$PROJECT_DIR$/node_modules/basic-healthcheck/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www.js" afterPath="$PROJECT_DIR$/bin/www.js" />
     </list>
     <list id="2a91ea88-40fe-4498-a517-46dba29228f6" name="New changelist" comment="" />
     <ignored path="NodeChecker.iws" />
@@ -501,21 +493,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/node_modules/basic-healthcheck/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-8.275862" vertical-offset="32" max-vertical-offset="697">
-                  <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="child_process.js" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.WebStorm9/system/extLibs/nodejs-v0.12.0-src/core-modules-sources/lib/child_process.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="15645" max-vertical-offset="23341">
-                  <caret line="949" column="0" selection-start-line="949" selection-start-column="0" selection-end-line="949" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.5472103" vertical-offset="0" max-vertical-offset="612">
+                  <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -551,11 +533,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="filesystem.jade" pinned="false" current-in-tab="true">
+          <file leaf-file-name="filesystem.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Views/filesystem.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2815735" vertical-offset="0" max-vertical-offset="483">
-                  <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+                <state vertical-scroll-proportion="-11.56" vertical-offset="0" max-vertical-offset="561">
+                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -577,10 +559,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="start.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="start.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/scripts/start.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5984252" vertical-offset="750" max-vertical-offset="1309">
+                <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1309">
                   <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#38#0" expanded="false" />
@@ -601,11 +583,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="false">
+          <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deploy.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="272">
-                  <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+                <state vertical-scroll-proportion="0.3167702" vertical-offset="0" max-vertical-offset="483">
+                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -663,7 +645,6 @@
         <option value="$PROJECT_DIR$/public/scripts/dir/div.js" />
         <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/public/scripts/service/service.js" />
-        <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/public/scripts/factory/factory.js" />
         <option value="$PROJECT_DIR$/Views/index.jade" />
         <option value="$PROJECT_DIR$/public/scripts/Login.js" />
@@ -675,6 +656,7 @@
         <option value="$PROJECT_DIR$/node_modules/basic-healthcheck/index.js" />
         <option value="$PROJECT_DIR$/public/scripts/start.js" />
         <option value="$PROJECT_DIR$/Views/filesystem.jade" />
+        <option value="$PROJECT_DIR$/deploy.sh" />
       </list>
     </option>
   </component>
@@ -1018,14 +1000,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260274" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4340021" sideWeight="0.5109375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650274" sideWeight="0.49960285" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25416997" sideWeight="0.49886104" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24895833" sideWeight="0.49626866" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24895833" sideWeight="0.49626866" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4340021" sideWeight="0.4890625" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24895833" sideWeight="0.50373137" order="2" side_tool="true" content_ui="tabs" />
@@ -1317,14 +1299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/uaaAuthenticator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
@@ -1413,14 +1387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.WebStorm9/system/extLibs/nodejs-v0.12.0-src/core-modules-sources/lib/child_process.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15645" max-vertical-offset="23341">
-          <caret line="949" column="0" selection-start-line="949" selection-start-column="0" selection-end-line="949" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/start.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.24" vertical-offset="661" max-vertical-offset="1207">
@@ -1475,19 +1441,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/start.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5984252" vertical-offset="750" max-vertical-offset="1309">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1309">
           <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/basic-healthcheck/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.275862" vertical-offset="32" max-vertical-offset="697">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,8 +1461,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/filesystem.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2815735" vertical-offset="0" max-vertical-offset="483">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state vertical-scroll-proportion="-11.56" vertical-offset="0" max-vertical-offset="561">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.WebStorm9/system/extLibs/nodejs-v0.12.0-src/core-modules-sources/lib/child_process.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.072961375" vertical-offset="0" max-vertical-offset="23664">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/basic-healthcheck/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5472103" vertical-offset="0" max-vertical-offset="612">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3167702" vertical-offset="0" max-vertical-offset="483">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
