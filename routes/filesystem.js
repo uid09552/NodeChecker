@@ -5,6 +5,14 @@ var express=require('express');
 var router=express.Router();
 var discspace = require('diskspace');
 var njds = require('nodejs-disks');
+var basicHC = require('basic-healthcheck');
+
+router.get('/',function(req,res){
+    var mystatus = basicHC.status([ 'memory', 'disk', 'node_version' ]);
+    res.status(201);
+    res.send(mystatus);
+});
+
 
 router.get('/filesystem',function(req,res){
     var alldiscstatus = [];

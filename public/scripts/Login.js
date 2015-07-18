@@ -2,7 +2,7 @@
  * Created by Max on 22.06.15.
  */
 
-var app=angular.module('Login',['ngRoute']);
+var app=angular.module('Login',['ngRoute','app.factory']);
 
 
 

@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "basic-healthcheck": "^1.0.0",
     "body-parser": "^1.12.4",
     "connect-rest": "^1.9.4",
     "diskspace": "^0.1.7",
@@ -17,6 +18,7 @@
     "forever": "^0.14.2",
     "jade": "^1.10.0",
     "jsonwebtoken": "^5.0.1",
+    "lodash": "^3.10.0",
     "log4js": "^0.6.25",
     "mocha": "^2.2.5",
     "mongoose": "^4.0.5",

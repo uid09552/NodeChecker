@@ -2,7 +2,7 @@
  * Created by Max on 23.06.15.
  */
 
-var testApp=angular.module('app',['ngRoute','Login','start','app.service','app.div']);
+var testApp=angular.module('app',['ngRoute','Login','start','app.service','app.div','app.factory']);
 
 testApp.config(function ($routeProvider,$locationProvider) {
     $routeProvider
@@ -16,6 +16,9 @@ testApp.config(function ($routeProvider,$locationProvider) {
         })
         .when('/filesystem',{
             templateUrl: '/filesystem'
+        })
+        .when('/api/getfilesystem',{
+            templateUrl: '/api/getfilesystem'
         })
         .when('/start',{
             templateUrl: '/start',

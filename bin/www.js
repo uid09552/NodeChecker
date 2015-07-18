@@ -89,6 +89,7 @@ app.get('/SayHello', function (req, res) {
                     req.decoded = decoded;
                     next();
                 }
+
             });
 
         } else {
@@ -109,7 +110,7 @@ app.get('/SayHello', function (req, res) {
 //protected area
 app.use('/mongo',isAuthenticated, mongo);
 app.use('/api/redis',isAuthenticated,redis);
-app.use('/api/filesystem',isAuthenticated, filesystem);//DONE
+app.use('/api/getFilesystem',isAuthenticated, filesystem);//DONE
 app.use('/setup',isAuthenticated,setup);
 app.use('/start',start);
 

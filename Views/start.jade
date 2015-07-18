@@ -48,7 +48,9 @@ html(ng-app="start")
                     input#password(type="password" required placeholder="password")
                 input(type="button")
                 div {{email}}
-
+    div.row
+        div.col-lg-12
+            include filesystem
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
     script(src='js/bootstrap.min.js')
     script(src='js/scripts.js')
@@ -56,6 +58,7 @@ html(ng-app="start")
     script(src='js/angular-route/angular-route.js')
     script(src='scripts/Login.js')
     script(src='scripts/dir/div.js')
+    script(src='scripts/factory/factory.js')
     script(src='scripts/service/service.js')
     script(src='scripts/start.js')
 

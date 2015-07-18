@@ -2,7 +2,7 @@
  * Created by Max on 02.07.15.
  */
 
-var start=angular.module('start',['app.div','app.service']);
+var start=angular.module('start',['app.div','app.service','app.factory']);
 
 start.run(function(){
    console.log('start app loaded');
@@ -40,6 +40,35 @@ start.controller('module',function($scope,FileData){
     console.log($scope.FileMessage[0].Message);
 });
 
-start.controller("forms",function($scope){
+start.controller("forms",function($scope,SessionState){
    $scope.email;
+    console.log(SessionState.isAuthenticated());
+});
+
+start.controller("filesystemCtrl",function($scope,$http){
+    console.log("Filesystem ctrl");
+    $scope.PerfData;
+
+
+    $scope.getFilesystem=function()
+    {
+        console.log('getting Healthcheck')
+        var conf={
+            method: 'GET',
+            url: 'api/getFilesystem'
+        };
+        console.log($http.defaults.headers);
+
+        $http.get('api/getfilesystem').success(
+            function(data,status,headers,config)
+            {
+                 $scope.PerfData=data;
+            }
+        ).error(function(data, status, headers, config) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log('auth error');
+            });
+    };
+   $scope.getFilesystem();
 });
