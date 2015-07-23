@@ -112,7 +112,7 @@ app.use('/mongo',isAuthenticated, mongo);
 app.use('/api/redis',isAuthenticated,redis);
 app.use('/api/getFilesystem',isAuthenticated, filesystem);//DONE
 app.use('/setup',isAuthenticated,setup);
-app.use('/start',start);
+app.use('/start',isAuthenticated,start);
 
 
 //page not found
