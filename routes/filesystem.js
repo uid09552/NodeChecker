@@ -7,9 +7,17 @@ var router=express.Router();
 var basicHC = require('basic-healthcheck');
 
 router.get('/',function(req,res){
-    var mystatus = basicHC.status([ 'memory', 'disk', 'node_version' ]);
-    res.status(201);
-    res.send(mystatus);
+    try {
+
+
+        var mystatus = basicHC.status(['memory', 'node_version']);
+        res.status(201);
+        res.send(mystatus);
+
+    }catch (e)
+    {
+        console.error(e);
+    }
 });
 
 
