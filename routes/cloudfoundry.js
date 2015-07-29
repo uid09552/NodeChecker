@@ -13,7 +13,7 @@ router.get('/quotas',function(req,res){
 
     if (token==null)
     {
-        authenticate("maximilian.hoch@siemens.com","Siemens12345!",res,req,getQuota);
+        authenticate("maximilian.hoch@siemens.com","",res,req,getQuota);
     }else getQuota(token,res,req);
 });
 
