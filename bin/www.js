@@ -10,15 +10,7 @@ var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var forever=require('forever');
 forever.checkProcess();
 //var User   = require('../models/user'); // get our mongoose model
-var globalTunnel = require('global-tunnel');
 
-globalTunnel.initialize({
-    host: 'solutions02.nbg9.siemens.de',
-    port: 3128
-});
-
-process.env.http_proxy = 'solutions02.nbg9.siemens.de:3128';
-globalTunnel.initialize();
 
 
 var app = express();
