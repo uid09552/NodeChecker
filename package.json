@@ -1,0 +1,30 @@
+{
+  "name": "NodeChecker",
+  "version": "1.0.0",
+  "description": "Checks different Services on CF",
+  "main": "app.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-healthcheck": "^1.0.0",
+    "body-parser": "^1.12.4",
+    "cloud-foundry": "0.0.3",
+    "ejs": "^2.3.1",
+    "express": "^4.12.4",
+    "forever": "^0.14.2",
+    "global-tunnel": "^1.2.0",
+    "jade": "^1.10.0",
+    "jsonwebtoken": "^5.0.1",
+    "lodash": "^3.10.0",
+    "log4js": "^0.6.25",
+    "mocha": "^2.2.5",
+    "mongoose": "^4.0.7",
+    "morgan": "^1.5.3",
+    "node-hash": "^1.1.2",
+    "password-hash": "^1.2.2",
+    "request": "^2.60.0"
+  }
+}

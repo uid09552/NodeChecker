@@ -1,0 +1,53 @@
+doctype html(lang='en')
+html(ng-app='Login')
+head
+    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+
+    meta(charset='utf-8')
+
+    title Bootstrap Login Form
+
+    meta(name='generator', content='Bootply')
+
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+    link(href='../css/bootstrap.min.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+
+    link(href='../css/styles.css', rel='stylesheet')
+body
+    // login modal
+    #loginModal.modal.show(tabindex='-1', role='dialog', aria-hidden='true')
+        div(ng-controller="Login").modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+
+                    h1.text-center #{LOGIN}
+
+                .modal-body
+                    form.form.col-md-12.center-block
+                        .form-group
+                            input.form-control.input-lg(type='text', placeholder='Email',ng-model="user")
+
+                        .form-group
+                            input.form-control.input-lg(type='password', placeholder='Password',ng-model="pwd")
+
+                        .form-group
+                            button(ng-click="loginclick()").btn.btn-primary.btn-lg.btn-block Sign In
+                        .row
+                            div Number of registered users: #{CountUsr}
+                            div Status: {{controllerStat}}
+
+                .modal-footer
+                    .col-md-12
+    // script references
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/angularjs/angular.js')
+    script(src='js/angular-route/angular-route.js')
+    script(src='scripts/factory/factory.js')
+    script(src='scripts/app.js')
+    script(src='scripts/Login.js')
+    script(src='scripts/start.js')

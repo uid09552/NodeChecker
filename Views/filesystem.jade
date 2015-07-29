@@ -1,0 +1,27 @@
+//
+   Created by Max on 18.07.2015.
+
+
+div(ng-controller="filesystemCtrl") Container Check
+    button(ng-click="getFilesystem()") Healthcheck
+    ul.list-group
+        li.list-group-item
+            span Free Disk&nbsp;
+            span(ng-bind="PerfData.disk")
+
+        li.list-group-item
+            span Free Memory&nbsp;
+            span(ng-bind="PerfData.memory")
+        li.list-group-item
+            span Node Version&nbsp;
+            span(ng-bind="PerfData.node_version")
+
+div MongoCheck
+
+div RedisCheck
+
+div UAACheck
+
+
+div Scale Check
+
