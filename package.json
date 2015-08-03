@@ -12,6 +12,7 @@
     "basic-healthcheck": "^1.0.0",
     "body-parser": "^1.12.4",
     "cloud-foundry": "0.0.3",
+    "deasync": "^0.1.0",
     "ejs": "^2.3.1",
     "express": "^4.12.4",
     "forever": "^0.14.2",

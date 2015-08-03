@@ -11,7 +11,7 @@ app.controller('Login',function($scope,$http,$location,SessionState){
     $scope.controllerStat="OK";
 
     $scope.loginclick=function(){
-        setAuthToken("auth", $http, $scope, $location,SessionState)
+        setAuthToken("api/cf/token", $http, $scope, $location,SessionState)
     };
 
     console.log($scope);
@@ -22,12 +22,12 @@ app.controller('Login',function($scope,$http,$location,SessionState){
 
 function setAuthToken(path, $http, $scope, $location,SessionState)
 {
-    $http.post(path, {Name:$scope.user,pwd:$scope.pwd}).
+    $http.post(path, {username:$scope.user,password:$scope.pwd}).
         success(function(data, status, headers, config) {
-
-            if (data.success)
+            console.log(data);
+            if (data.Authenticated)
             {
-                $http.defaults.headers.common["X-AUTH-TOKEN"]=data.token;
+                $http.defaults.headers.common["Authorization"]=headers.Authorization;
                 $http.defaults.user=$scope.user;
                 console.log('Token set');
                 $location.path('/start');

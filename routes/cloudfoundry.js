@@ -5,16 +5,26 @@ var express=require('express');
 var router=express.Router();
 var cf =require('cloud-foundry');
 var config=require('../config/config');
+
 var requester=require('request');
 
+//Authenticate
+router.post('/token',function(req,res){
+   var user=req.body.username;
+   var pwd=req.body.password;
+   authenticate(user,pwd,function(token){
+       res.set('Authorization','bearer '+token);
+       res.send({'Authenticated':true});
+   }) ;
+});
 
 router.get('/quotas',function(req,res){
     var token=req.headers['cf-bearer'];
 
     if (token==null)
     {
-        authenticate("maximilian.hoch@siemens.com","",res,req,getQuota);
-    }else getQuota(token,res,req);
+        authenticate("maximilian.hoch@siemens.com","Siemens12345!",res,req,getQuota);
+    }else getQuota(res,req);
 });
 
 function getQuota(token,res,req)
@@ -30,7 +40,7 @@ function getQuota(token,res,req)
         }
     });
 }
-function authenticate(user,password,res,req,callback)
+function authenticate(user,password,callback)
 {
     var host="https://uaa.sys.sagicsfmo.cf.canopy-cloud.com/oauth/token"
     var header={"content-type":"application/x-www-form-urlencoded",
@@ -39,8 +49,7 @@ function authenticate(user,password,res,req,callback)
     requester({uri:host,headers:header,method:'POST',form:data},function(error,res,body){
         if(error==null)
         {
-            res.setHeader("cf-bearer",body.access_token);
-            callback(body.access_token,res,req);
+            callback(JSON.parse(body).access_token);
         }
 
     });

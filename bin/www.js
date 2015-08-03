@@ -76,23 +76,18 @@ app.get('/SayHello', function (req, res) {
 
     function isAuthenticated(req, res, next) {
         // check header or url parameters or post parameters for token
-        var token = req.body.token || req.query.token || req.headers['x-auth-token'];
+        var token = req.body.token || req.query.token || req.headers['Authorization'];
 
         // decode token
         if (token) {
 
-            //https://www.npmjs.com/package/jsonwebtoken
-            // verifies secret and checks exp
-            jwt.verify(token, app.get('secret'), function (err, decoded) {
-                if (err) {
-                    return res.json({success: false, message: 'Failed to authenticate token.'});
-                } else {
-                    // if everything is good, save to request for use in other routes
-                    req.decoded = decoded;
-                    next();
-                }
 
-            });
+                return res.json({Authenticated: false, message: 'Failed to authenticate token.'});
+
+                    next();
+
+
+
 
         } else {
 
@@ -109,6 +104,29 @@ app.get('/SayHello', function (req, res) {
 
         }
     }
+
+function getCheckToken(token)
+{
+    var ok;
+    var host=config.uaa_endpoint+"/check_token"
+    var header={"content-type":"application/x-www-form-urlencoded",
+        "accept":"application/json;charset=utf-8","authorization":"Basic Y2Y6"};
+    token=token.replace('bearer ','');
+    var data={token:token};
+    requester({uri:host,headers:header,method:'POST',form:data},function(error,res,body){
+        if(error==null)
+        {
+           ok=true;
+        }
+    });
+    while(ok===undefined)
+    {
+        require('deasync').runLoopOnce();
+    }
+
+    return ok;
+}
+
 //protected area
 app.use('/mongo',isAuthenticated, mongo);
 app.use('/api/redis',isAuthenticated,redis);
