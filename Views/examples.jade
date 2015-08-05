@@ -1,0 +1,44 @@
+//
+   Created by Max on 18.07.2015.
+
+div(ng-controller="start") Startmaske
+    div.row
+        div.col-md-12.center-block#mouseclick Mausklick direktive
+            button(ng-click="mouseclick()").btn.btn-primary.btn-block.btn-lg Click
+            button(ng-click="clickreset($event)", ng-mouseover="mouseclick()")
+
+            div(ng-bind="mouseclickp")
+            input(ng-model="inputtest")
+            article(ng-bind="inputtest")
+    div.row
+        div.col-lg-12.center-block on change
+            label.checkbox
+                div.checkbox
+                    label.checkbox
+                        input(type="checkbox",ng-model="checked", ng-change="onchange()")
+                    label(ng-bind="onchangediv")
+                    label(ng-cloak) {{onchangediv}}
+    div.row styles
+        div.btn-group.col-lg-12
+            a.btn(href="#",ng-click="textclass='text-left'")
+                li.glyphicon-align-left
+            a.btn.glyphicon-align-center(ng-click="textclass='text-center'")
+            div width:
+            input(type="text",ng-model="textwidth")
+            div(ng-class="textclass",ng-style='{"width": textwidth+"px"}').col-lg-12 asdfasdfasdfdsfasdfasasfdasdfasfdasfdadfadsfasfdaswera
+            div(ng-div) vom Transclude
+
+div.row service module
+    div.col-md-12
+        section(ng-controller="module")
+            div(ng-bind="FileMessage[0].Message")
+            ul.navlist
+                li(ng-repeat="message in FileMessage") {{message.Message}}
+div.row(ng-controller="forms") Formulare
+    form.form-horizontal.well
+        div.control-group
+            div.controls
+                input#inputEmail(type="email" required placeholder="email" ng-model="email")
+                input#password(type="password" required placeholder="password")
+            input(type="button")
+            div {{email}}

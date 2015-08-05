@@ -1,0 +1,37 @@
+div(ng-controller="cfListAppsCtrl") Running Apps
+   div
+      button(ng-click="getCFAllApps()") Refresh
+      h1 Number of apps
+         span(ng-bind="AllApps.total_results")
+      ul.list-group
+         li.list-group-item(ng-repeat="item in AllApps.resources" )
+            div(ng-class-even="roweven" ng-class-odd="rowodd")
+               span APP GUID:&nbsp;
+               span(ng-bind="item.metadata.guid")
+               br
+               span APP Name:&nbsp;
+               span(ng-bind="item.entity.name")
+               hr
+               span State:&nbsp
+               span(ng-bind="item.entity.state")
+               br
+               span Instances:&nbsp;
+               span(ng-bind="item.entity.instances")
+               br
+               span Memory:&nbsp;
+               span(ng-bind="item.entity.memory")
+               span MB
+               br
+               span Disk Quota:&nbsp;
+               span(ng-bind="item.entity.disk_quota")
+               span MB
+               br
+               span Buildpack:&nbsp;
+               span(ng-bind="item.entity.buildpack")
+               br
+               span Package State:&nbsp;
+               span(ng-bind="item.entity.package_state")
+
+
+
+

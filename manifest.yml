@@ -1,0 +1,5 @@
+---
+applications:
+- name: nodechecker
+  memory: 512M
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
