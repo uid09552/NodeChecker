@@ -103,27 +103,7 @@ app.get('/SayHello', function (req, res) {
         }
     }
 
-function getCheckToken(token)
-{
-    var ok;
-    var host=config.uaa_endpoint+"/check_token"
-    var header={"content-type":"application/x-www-form-urlencoded",
-        "accept":"application/json;charset=utf-8","authorization":"Basic Y2Y6"};
-    token=token.replace('bearer ','');
-    var data={token:token};
-    requester({uri:host,headers:header,method:'POST',form:data},function(error,res,body){
-        if(error==null)
-        {
-           ok=true;
-        }
-    });
-    while(ok===undefined)
-    {
-        require('deasync').runLoopOnce();
-    }
 
-    return ok;
-}
 
 //protected area
 app.use('/mongo',isAuthenticated, mongo);

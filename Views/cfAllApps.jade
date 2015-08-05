@@ -1,0 +1,41 @@
+div(ng-controller="cfListAppsCtrl")
+   .col-lg-12.col-md-12
+      .panel.panel-primary()
+         .panel-heading(ng-click="cfAppListvisible=!cfAppListvisible")
+            .row
+               .col-xs-3
+               .col-xs-9.text-right
+                  .huge(ng-bind="AllApps.total_results")
+                  div Available Services
+         div
+            button(ng-click="getCFAllApps()").glyphicon.glyphicon-refresh
+            .panel-footer
+               div(ng-hide="cfAppListvisible")
+                  ul.list-group
+                     li.list-group-item(ng-repeat="item in AllApps.resources" )
+                        div(ng-class-even="roweven" ng-class-odd="rowodd")
+                           span APP GUID:&nbsp;
+                           span(ng-bind="item.metadata.guid")
+                           br
+                           span APP Name:&nbsp;
+                           span(ng-bind="item.entity.name")
+                           hr
+                           span State:&nbsp
+                           span(ng-bind="item.entity.state")
+                           br
+                           span Instances:&nbsp;
+                           span(ng-bind="item.entity.instances")
+                           br
+                           span Memory:&nbsp;
+                           span(ng-bind="item.entity.memory")
+                           span MB
+                           br
+                           span Disk Quota:&nbsp;
+                           span(ng-bind="item.entity.disk_quota")
+                           span MB
+                           br
+                           span Buildpack:&nbsp;
+                           span(ng-bind="item.entity.buildpack")
+                           br
+                           span Package State:&nbsp;
+                           span(ng-bind="item.entity.package_state")

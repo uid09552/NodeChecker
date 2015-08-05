@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+html(ng-app="start")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+        link(href='../css/bootstrap.min.css', rel='stylesheet')
+        link(href='css/style.css', rel='stylesheet')
+    body
+    div.container-fluid
+
+        div.row
+            div.col-lg-12
+                include filesystem
+        div.row
+            div.col-lg-12
+                include cfapps
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/scripts.js')
+
+                                    
