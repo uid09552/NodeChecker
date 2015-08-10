@@ -53,9 +53,12 @@ start.controller("cfAppStatsCtrl",function($scope,$http)
 });
 
 start.controller('cfListAppsCtrl',function($scope,$http){
-   console.log('getting all Apps');
+
+
   $scope.AllApps;
-  $scope.cfAppListvisible=false;
+  $scope.cfAppListvisible;
+
+
     $scope.getCFAllApps=function() {
             $http.get('api/cf/ListApps').success(
                 function (data, status, headers, config) {
@@ -73,6 +76,28 @@ start.controller('cfListAppsCtrl',function($scope,$http){
     }
     $scope.getCFAllApps();
     $scope.cfAppListvisible=true;
+
+
+
+
+    $scope.appDetails=function(guid)
+    {
+        console.log(guid);
+        $http.post('api/cf/AppUsageInfo',{"guid":guid}).success(
+            function (data, status, headers, config) {
+
+               var AllApps= $scope.AllApps;
+
+            }
+        ).error(function (data, status, headers, config) {
+               console.error(data);
+            });
+    }
+
+
+
+
+
 });
 
 

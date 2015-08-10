@@ -36,7 +36,23 @@ router.get('/ListApps',function(req,res){
     });
 });
 
+router.get('/ListOrgs',function(req,res){
+    var token=req.headers['authorization'] || req.headers['Authorization'] ;
+    var dataresponse;
+    getAllOrgs(token,function(data){
+        console.log(data);
+    });
+});
 
+router.post('/AppUsageInfo',function(req,res){
+    var token=req.headers['authorization'] || req.headers['Authorization'] ;
+    var dataresponse;
+    var guid=req.body.guid;
+    getAppStats(token,guid,function(data){
+        console.log(data);
+        res.send(data);
+    });
+});
 
 function getQuota(token,res,req)
 {
@@ -82,6 +98,36 @@ function getAllApps(token,callback)
 
     });
 }
+
+function getAppStats(token,AppID,callback)
+{
+    var host=config.cf_endpoint+"/v2/apps/"+AppID+"/stats"
+    var headers={"Authorization":token };
+    var r=requester.defaults({'proxy':proxy});
+    r({uri:host,headers:headers,method:'GET'},function(error,res,body){
+        if(error==null)
+        {
+            callback(JSON.parse(body));
+        }
+
+    });
+}
+
+function getAllOrgs(token,callback)
+{
+    var host=config.cf_endpoint+"/v2/organizations"
+    var headers={"Authorization":token };
+    var r=requester.defaults({'proxy':proxy});
+    r({uri:host,headers:headers,method:'GET'},function(error,res,body){
+        if(error==null)
+        {
+            callback(JSON.parse(body));
+        }
+
+    });
+}
+
+
 
 function checkToken(token)
 {

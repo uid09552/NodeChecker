@@ -39,3 +39,6 @@ div(ng-controller="cfListAppsCtrl")
                            br
                            span Package State:&nbsp;
                            span(ng-bind="item.entity.package_state")
+                           button(ng-click="appDetails(item.metadata.guid)") Details
+
+
