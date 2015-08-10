@@ -5,11 +5,21 @@ var express=require('express');
 var router=express.Router();
 var cf =require('cloud-foundry');
 var config=require('../config/config');
-var https = require('https');
-https.globalAgent.options.secureProtocol = 'SSLv3_method';
+var async=require('async');
+//var https = require('https');
+//https.globalAgent.options.secureProtocol = 'SSLv3_method';
 var requester=require('request');
 var proxy="http://solutions02.nbg9.siemens.de:3128";
 //Authenticate
+proxy="";
+var r;
+if (proxy!="")
+{
+    r=requester.defaults({'proxy':proxy});
+}else
+{
+    r=requester;
+}
 
 router.post('/token',function(req,res){
    var user=req.body.username;
@@ -25,7 +35,13 @@ router.post('/token',function(req,res){
 });
 
 router.get('/quotas',function(req,res){
-    var token=req.headers['Authorization'];
+    var token=req.headers['authorization'];
+    getQuotaPercantage(token,req,res,function(quota,app,orgs){
+        console.log(quota);
+        console.log(app);
+        console.log(orgs);
+
+    });
 
 });
 
@@ -54,19 +70,59 @@ router.post('/AppUsageInfo',function(req,res){
     });
 });
 
-function getQuota(token,res,req)
+
+function getQuotaPercantage(token,res,req,callback)
+{
+    var quota;
+    var app;
+    var orgs;
+    async.parallel([
+        function(callback){
+            getAllApps(token, function(data){
+                app=data;
+                console.log('Apps fetched');
+                callback();
+            })},
+        function(callback)
+        {
+            getAllOrgs(token,function(data){
+                orgs=data;
+                console.log('orgs fetched');
+                callback();
+            })},
+                function(callback){
+                    getQuota(token,function(data){
+                    quota=data;
+                    console.log('quota fetched');
+                        callback();
+                })
+}
+    ],function(err){
+        console.log(err);
+        callback(quota,app,orgs);
+    });
+
+}
+
+function calculateQuotaPercentage(quota,organisations,apps)
+{
+
+}
+
+function getQuota(token,callback)
 {
     var host=config.cf_endpoint+"/v2/quota_definitions";
-    var headers={"Authorization":"bearer " + token };
+    var headers={"Authorization":token };
 
     requester({uri:host,headers:headers,method:'GET'}, function (error, response, body) {
         console.log('request');
-        if (!error && response.statusCode == 200) {
+        if (!error) {
             console.log(body) // Show the HTML for the Google homepage.
-            res.send(body);
+            callback(JSON.parse(body));
         }
     });
 }
+
 
 
 function authenticate(user,password,callback)
@@ -75,7 +131,7 @@ function authenticate(user,password,callback)
     var header={"content-type":"application/x-www-form-urlencoded",
         "accept":"application/json;charset=utf-8","authorization":"Basic Y2Y6"};
     var data={username:user,password:password,grant_type:"password"};
-    var r=requester.defaults({'proxy':proxy});
+
     r({uri:host,headers:header,method:'POST',form:data},function(error,res,body){
         if(error==null)
         {
@@ -89,7 +145,6 @@ function getAllApps(token,callback)
 {
     var host=config.cf_endpoint+"/v2/apps"
     var headers={"Authorization":token };
-    var r=requester.defaults({'proxy':proxy});
     r({uri:host,headers:headers,method:'GET'},function(error,res,body){
         if(error==null)
         {
@@ -103,7 +158,7 @@ function getAppStats(token,AppID,callback)
 {
     var host=config.cf_endpoint+"/v2/apps/"+AppID+"/stats"
     var headers={"Authorization":token };
-    var r=requester.defaults({'proxy':proxy});
+
     r({uri:host,headers:headers,method:'GET'},function(error,res,body){
         if(error==null)
         {
