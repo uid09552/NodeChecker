@@ -3,13 +3,24 @@
 div(ng-controller="cfOrgListCtrl")
    .col-lg-12.col-md-12
       .panel.panel-primary()
-         .panel-heading(ng-click="cfAppListvisible=!cfAppListvisible")
-            .row Available Organizations
+         .panel-heading(ng-click="hiddenAllData=!hiddenAllData")
+            .row
                .col-xs-3
                .col-xs-9.text-right
                   .huge
-                  div
+                  div Available Organizations
          div
-            progressbar(max=100 value=50)
-               span 50
+            button(ng-click="getAllData()").glyphicon.glyphicon-refresh
+            .panel-footer
+               div(ng-hide="hiddenAllData")
+                  div(ng-repeat="org in AllData.orgs")
+                     span(ng-bind="org.Org_Name").huge
+                     br
+                     span(ng-bind="org.allocatedOrg_Memory")
+                     span MB/
+                     span(ng-bind="org.quota.entity.memory_limit")
+                     span MB
+                     br
+                     progressbar(class="progress-striped active" value="org.quotaPerc" animate="true")
+                        span(ng-bind="org.quotaPerc")
 

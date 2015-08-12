@@ -6,6 +6,7 @@ var factory=angular.module('app.factory', []);
 factory.factory('SessionState',function(){
 var isAuthenticated=false;
 var token;
+    var username;
 return {
     isAuthenticated:function(){
         return isAuthenticated;
@@ -21,5 +22,13 @@ return {
     setToken: function(value)
     {
         token=value;
+    },
+    getUser: function()
+    {
+        return username;
+    },
+    setUser: function(value)
+    {
+        username=value;
     }
 }});

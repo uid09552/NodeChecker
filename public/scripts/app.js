@@ -31,27 +31,7 @@ testApp.controller('MainCt' +
 });
 
 
-testApp.factory('SessionState',function(){
-    var isAuthenticated=false;
-    var token;
-    return {
-        isAuthenticated:function(){
-            return isAuthenticated;
-        },
-        setAuth: function(value)
-        {
-            isAuthenticated=value;
-        },
-        getToken: function()
-        {
-            return token;
-        },
-        setToken: function(value)
-        {
-            token=value;
-        }
-    }
-});
+
 
 testApp.run(function($rootScope,$location,SessionState){
     $rootScope.$on('$routeChangeStart',

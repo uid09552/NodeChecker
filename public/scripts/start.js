@@ -8,7 +8,7 @@ start.run(function(){
    console.log('start app loaded');
 });
 
-start.controller('start',function($scope){
+start.controller('start',function($scope,SessionState){
     $scope.mouseclickp=1;
     $scope.inputtest="a";
     $scope.onchangediv=0;
@@ -34,6 +34,11 @@ start.controller('start',function($scope){
 
 });
 
+start.controller('navCtrl',function($scope,SessionState){
+    $scope.UserName=SessionState.getUser();
+
+});
+
 start.controller('module',function($scope,FileData){
 
     $scope.FileMessage=FileData.getFileData();
@@ -48,6 +53,74 @@ start.controller("forms",function($scope,SessionState){
 
 start.controller("cfAppStatsCtrl",function($scope,$http)
 {
+
+
+});
+
+start.controller('cfOrgListCtrl',function($scope,$http){
+   $scope.AllData;
+
+   $scope.hiddenAllData=false;
+
+   $scope.getProgressBarMaxValue=function(org_guid){
+       if ($scope.AllData!=null)
+       {
+           var i;
+           for (i=0;i< $scope.AllData.orgs;i++)
+           {
+               if ($scope.AllData.orgs[i].Org_GUID==org_guid)
+               {
+                   return $scope.AllData.orgs[i].quota.entity.memory_limit;
+
+               }
+           }
+       }
+   }
+    $scope.getProgressbarAllocatedQuota=function(org_guid)
+    {
+        if ($scope.AllData!=null)
+        {
+            var i;
+            for (i=0;i< $scope.AllData.orgs;i++)
+            {
+                if ($scope.AllData.orgs[i].Org_GUID==org_guid)
+                {
+                    console.log( parseInt($scope.AllData.orgs[i].quotaPerc));
+                    return parseInt($scope.AllData.orgs[i].quotaPerc);
+
+                }
+            }
+        }
+    }
+    $scope.getProgressBarAllocatedValue=function(org_guid){
+        if ($scope.AllData!=null)
+        {
+            var i;
+            for (i=0;i< $scope.AllData.orgs;i++)
+            {
+                if ($scope.AllData.orgs[i].Org_GUID==org_guid)
+                {
+                    return $scope.AllData.orgs[i].allocatedOrg_Memory;
+
+                }
+            }
+        }
+    }
+
+   $scope.getAllData=function(){
+       $http.get('api/cf/AllData').success(
+           function (data, status, headers, config) {
+
+               $scope.AllData = data;
+               console.log("AllData fetched");
+           }
+       ).error(function (data, status, headers, config) {
+
+               $scope.AllData = "";
+               console.error(data);
+           });
+   }
+    $scope.getAllData();
 
 
 });
@@ -74,7 +147,7 @@ start.controller('cfListAppsCtrl',function($scope,$http){
                     console.error(data);
                 });
     }
-    $scope.getCFAllApps();
+  //  $scope.getCFAllApps();
     $scope.cfAppListvisible=true;
 
 

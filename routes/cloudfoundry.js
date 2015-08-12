@@ -11,7 +11,7 @@ var async=require('async');
 var requester=require('request');
 var proxy="http://solutions02.nbg9.siemens.de:3128";
 //Authenticate
-proxy="";
+
 var r;
 if (proxy!="")
 {
@@ -34,16 +34,17 @@ router.post('/token',function(req,res){
    }) ;
 });
 
-router.get('/quotas',function(req,res){
+router.get('/AllData',function(req,res){
     var token=req.headers['authorization'];
-    getQuotaPercantage(token,req,res,function(quota,app,orgs){
-        console.log(quota);
-        console.log(app);
-        console.log(orgs);
+    getQuotaPercantage(token,req,res,function(quota,app,orgs,spaces){
 
+        var result=mergeData(quota,orgs,app,spaces);
+        res.send(result);
     });
 
 });
+
+
 
 router.get('/ListApps',function(req,res){
     var token=req.headers['authorization'] || req.headers['Authorization'] ;
@@ -56,7 +57,7 @@ router.get('/ListOrgs',function(req,res){
     var token=req.headers['authorization'] || req.headers['Authorization'] ;
     var dataresponse;
     getAllOrgs(token,function(data){
-        console.log(data);
+
     });
 });
 
@@ -65,7 +66,7 @@ router.post('/AppUsageInfo',function(req,res){
     var dataresponse;
     var guid=req.body.guid;
     getAppStats(token,guid,function(data){
-        console.log(data);
+
         res.send(data);
     });
 });
@@ -76,6 +77,7 @@ function getQuotaPercantage(token,res,req,callback)
     var quota;
     var app;
     var orgs;
+    var spaces;
     async.parallel([
         function(callback){
             getAllApps(token, function(data){
@@ -95,17 +97,94 @@ function getQuotaPercantage(token,res,req,callback)
                     quota=data;
                     console.log('quota fetched');
                         callback();
-                })
+                })},
+                        function(callback){
+                            getAllSpaces(token,function(data){
+                                spaces=data;
+                                console.log('spaces fetched');
+                                callback();
+                            });
 }
     ],function(err){
         console.log(err);
-        callback(quota,app,orgs);
+        callback(quota,app,orgs,spaces);
     });
 
 }
 
-function calculateQuotaPercentage(quota,organisations,apps)
-{
+
+
+
+function mergeData(quota,organisations,apps,spaces) {
+    var res = {};
+    res.orgs=[];
+    var i;
+    for (i = 0; i < organisations.resources.length; i++)
+    {
+
+        res.orgs[i]= {};
+        res.orgs[i].Org_GUID=organisations.resources[i].metadata.guid;
+        res.orgs[i].Org_Name=organisations.resources[i].entity.name;
+        res.orgs[i].Org_metadata=organisations.resources[i].metadata;
+        res.orgs[i].Org_entity=organisations.resources[i].entity;
+
+        var space=spaces.resources.filter(function(space){
+           return space.entity.organization_guid==  res.orgs[i].Org_GUID
+        });
+        res.orgs[i].Org_Spaces=space;
+        var single_quota=quota.resources.filter(function(q){
+           return q.metadata.guid==res.orgs[i].Org_entity.quota_definition_guid
+        });
+
+        if (single_quota.length>0){res.orgs[i].quota=single_quota[0];}
+
+        var i_spaces;
+        res.orgs[i].apps=[];
+
+        var i_apps;
+        var orgquota_mem=0;
+        var orgquota_disk=0;
+        //all spaces in org
+        for (i_spaces=0;i_spaces<res.orgs[i].Org_Spaces.length;i_spaces++) {
+
+            var app = apps.resources.filter(function (app) {
+                return app.entity.space_guid ==res.orgs[i].Org_Spaces[i_spaces].metadata.guid
+            });
+            var spacequota_mem=0;
+            var spacequota_disk=0;
+
+            //all apps in space
+            for (i_apps=0;i_apps<app.length;i_apps++)
+            {
+
+                    spacequota_mem = app[i_apps].entity.memory * app[i_apps].entity.instances+spacequota_mem;
+                    spacequota_disk=app[i_apps].entity.disk_quota * app[i_apps].entity.instances+spacequota_disk;
+
+            }
+
+            orgquota_mem=spacequota_mem+orgquota_mem;
+            orgquota_disk=orgquota_disk+spacequota_disk;
+
+            res.orgs[i].Org_Spaces[i_spaces].allocatedSpace_Memory=spacequota_mem;
+            res.orgs[i].Org_Spaces[i_spaces].allocatedSpace_Disk=spacequota_disk;
+
+            res.orgs[i].apps.push(app); //for faster access
+            res.orgs[i].Org_Spaces[i_spaces].apps=app;
+
+        }
+
+        res.orgs[i].allocatedOrg_Memory=orgquota_mem;
+        res.orgs[i].allocatedOrg_Disk=orgquota_disk;
+
+        res.orgs[i].quotaPerc= (res.orgs[i].allocatedOrg_Memory/res.orgs[i].quota.entity.memory_limit)*100;
+
+
+    }
+
+
+
+    return res;
+
 
 }
 
@@ -114,7 +193,7 @@ function getQuota(token,callback)
     var host=config.cf_endpoint+"/v2/quota_definitions";
     var headers={"Authorization":token };
 
-    requester({uri:host,headers:headers,method:'GET'}, function (error, response, body) {
+    r({uri:host,headers:headers,method:'GET'}, function (error, response, body) {
         console.log('request');
         if (!error) {
             console.log(body) // Show the HTML for the Google homepage.
@@ -122,8 +201,6 @@ function getQuota(token,callback)
         }
     });
 }
-
-
 
 function authenticate(user,password,callback)
 {
@@ -182,6 +259,19 @@ function getAllOrgs(token,callback)
     });
 }
 
+function getAllSpaces(token,callback)
+{
+    var host=config.cf_endpoint+"/v2/spaces"
+    var headers={"Authorization":token };
+    var r=requester.defaults({'proxy':proxy});
+    r({uri:host,headers:headers,method:'GET'},function(error,res,body){
+        if(error==null)
+        {
+            callback(JSON.parse(body));
+        }
+
+    });
+}
 
 
 function checkToken(token)
