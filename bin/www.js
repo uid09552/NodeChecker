@@ -44,8 +44,9 @@ app.set('views', './Views');
 app.set('view engine', 'jade');
 
     //Configuration reading
+if (config.mongodb!="") {
     mongoose.connect(config.mongodb);
-
+}
     app.set('secret',config.secret);
     console.log('Configuration read');
     var db=mongoose.connection;

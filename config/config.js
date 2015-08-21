@@ -6,7 +6,7 @@ var conf;
 var port = process.env.PORT || 3001;
 conf = {
     'secret': 'mysecretpasswordtoverifyjsontokens',
-    'mongodb': 'mongodb://node:Siemens12345!@dbh62.mongolab.com:27627/nodechecker',
+    'mongodb': '',
     'port': port,
     'cf_endpoint': 'https://api.sys.sagicsfmo.cf.canopy-cloud.com',
     'uaa_endpoint':'https://uaa.sys.sagicsfmo.cf.canopy-cloud.com'
