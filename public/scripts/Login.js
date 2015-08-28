@@ -32,7 +32,7 @@ function setAuthToken(path, $http, $scope, $location,SessionState)
                 console.log('Token set');
                 SessionState.setToken(headers('Authorization'));
                 SessionState.setAuth(true);
-                SessionState.setUser("test");
+                SessionState.setUser($scope.user);
                 console.log(headers('Authorization'));
                 $location.path('/start');
                // window.location.href='/filesystem';
